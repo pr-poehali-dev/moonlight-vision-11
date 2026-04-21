@@ -77,32 +77,25 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.8 }}
       >
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center text-foreground mix-blend-difference">
-          Мир глазами <em className="italic">смартфона</em>.
+        {/* Leica logo */}
+        <motion.img
+          src="https://cdn.poehali.dev/projects/43dbe8e6-d0b4-4555-b416-1bf1c351f578/bucket/3733c43f-dfe6-46e3-a852-18310653cbf3.jpeg"
+          alt="Leica"
+          className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover shadow-lg"
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        />
+
+        <h1
+          className="text-center text-foreground mix-blend-difference"
+          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(2.8rem, 8vw, 7rem)", fontWeight: 300, letterSpacing: "0.04em", fontStyle: "italic", lineHeight: 1.1 }}
+        >
+          Michael by Leica
         </h1>
         <p className="text-base md:text-lg text-foreground/70 mix-blend-difference text-center max-w-sm pointer-events-auto">
-          Мобильная фотография — скачивай в лучшем качестве
+          Мобильная фотография — скачивайте в лучшем качестве
         </p>
-
-        {/* Leica branding */}
-        <motion.div
-          className="flex items-center gap-3 mt-2"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-        >
-          {/* Leica red dot logo */}
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="14" cy="14" r="13" fill="#E30613" stroke="white" strokeWidth="1"/>
-            <text x="14" y="18.5" textAnchor="middle" fill="white" fontSize="7.5" fontFamily="serif" fontWeight="bold" letterSpacing="0.5">LEICA</text>
-          </svg>
-          <span
-            className="text-foreground/80 mix-blend-difference"
-            style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)", fontWeight: 300, letterSpacing: "0.12em", fontStyle: "italic" }}
-          >
-            Michael by Leica
-          </span>
-        </motion.div>
       </motion.div>
 
       <motion.div
