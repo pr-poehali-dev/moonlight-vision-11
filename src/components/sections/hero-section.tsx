@@ -72,14 +72,17 @@ export function HeroSection() {
       </div>
 
       <motion.div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none z-10"
+        className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 gap-4"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.8 }}
       >
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center text-foreground mix-blend-difference">
-          Ваши работы, <em className="italic">в фокусе</em>.
+          Мир глазами <em className="italic">смартфона</em>.
         </h1>
+        <p className="text-base md:text-lg text-foreground/70 mix-blend-difference text-center max-w-sm pointer-events-auto">
+          Мобильная фотография — скачивай в лучшем качестве
+        </p>
       </motion.div>
 
       <motion.div

@@ -24,13 +24,22 @@ export function ShowcaseSection() {
     <section ref={containerRef} className="bg-background px-6 py-32 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.p
-          className="text-muted-foreground text-sm uppercase tracking-widest mb-8"
+          className="text-muted-foreground text-sm uppercase tracking-widest mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           Галерея
         </motion.p>
+        <motion.h2
+          className="text-3xl md:text-5xl font-serif text-foreground mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
+          Каждый кадр — история
+        </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {showcaseImages.map((src, i) => (
@@ -50,11 +59,14 @@ export function ShowcaseSection() {
             >
               <motion.img
                 src={src}
-                alt={`Изображение ${i + 1}`}
+                alt={`Снимок ${i + 1}`}
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                <span className="text-white text-sm font-medium tracking-widest uppercase">Скачать</span>
+              </div>
             </motion.div>
           ))}
         </div>

@@ -5,24 +5,24 @@ import { ArrowRight } from "lucide-react"
 
 const articles = [
   {
-    title: "Искусство визуального сторителлинга",
-    category: "Дизайн",
+    title: "Как снимать уличную фотографию на телефон",
+    category: "Техника",
     image: "/visual-storytelling-design-article.jpg",
   },
   {
-    title: "Как создать личный бренд онлайн",
-    category: "Стратегия",
+    title: "Свет и тень: магия естественного освещения",
+    category: "Свет",
     image: "/personal-branding-digital-marketing.jpg",
   },
   {
-    title: "Тренды типографики 2025",
-    category: "Типографика",
+    title: "Почему смартфон — лучшая камера для путешествий",
+    category: "Снаряжение",
     image: "/typography-trends-modern-fonts.jpg",
   },
   {
-    title: "Минимализм в дизайне портфолио",
-    category: "Вдохновение",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Найти кадр там, где его не ждут",
+    category: "Взгляд",
+    image: "/photography-portfolio-website-clean.jpg",
   },
 ]
 
@@ -38,13 +38,22 @@ export function InsightsSection() {
     <section className="bg-background px-6 py-24" onMouseMove={handleMouseMove}>
       <div className="max-w-4xl mx-auto">
         <motion.p
-          className="text-muted-foreground text-sm uppercase tracking-widest mb-8"
+          className="text-muted-foreground text-sm uppercase tracking-widest mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           Статьи
         </motion.p>
+        <motion.h2
+          className="text-3xl md:text-5xl font-serif text-foreground mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
+          Заметки о фотографии
+        </motion.h2>
 
         <div className="divide-y divide-border">
           {articles.map((article, i) => (
