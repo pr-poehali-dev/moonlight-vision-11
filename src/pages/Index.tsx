@@ -5,6 +5,7 @@ import { ManifestoSection } from "@/components/sections/manifesto-section"
 import { FeaturesSection } from "@/components/sections/features-section"
 import { ShowcaseSection } from "@/components/sections/showcase-section"
 import { CarouselSection } from "@/components/sections/carousel-section"
+import { PhoneSection } from "@/components/sections/phone-section"
 import { InsightsSection } from "@/components/sections/insights-section"
 import { FooterSection } from "@/components/sections/footer-section"
 
@@ -18,6 +19,7 @@ const Index = () => {
         <FeaturesSection />
         <ShowcaseSection />
         <CarouselSection />
+        <PhoneSection />
         <InsightsSection />
         <FooterSection />
       </main>

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 
 const footerLinks = [
   { label: "Галерея", href: "#" },
-  { label: "Статьи", href: "#" },
+  { label: "Статьи", href: "/articles" },
   { label: "О проекте", href: "#" },
 ]
 

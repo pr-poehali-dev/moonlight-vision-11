@@ -2,6 +2,7 @@ import type React from "react"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const articles = [
   {
@@ -59,7 +60,7 @@ export function InsightsSection() {
           {articles.map((article, i) => (
             <motion.a
               key={i}
-              href="#"
+              href="/articles"
               className="group flex items-center justify-between py-6 relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -80,6 +81,23 @@ export function InsightsSection() {
             </motion.a>
           ))}
         </div>
+
+        <motion.div
+          className="mt-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        >
+          <Link
+            to="/articles"
+            className="inline-flex items-center gap-2 text-sm font-medium text-foreground border border-border rounded-full px-6 py-3 hover:bg-secondary transition-colors"
+            data-clickable
+          >
+            Все статьи
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
 
         {/* Floating hover image */}
         <AnimatePresence>
