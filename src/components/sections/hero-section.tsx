@@ -83,6 +83,26 @@ export function HeroSection() {
         <p className="text-base md:text-lg text-foreground/70 mix-blend-difference text-center max-w-sm pointer-events-auto">
           Мобильная фотография — скачивай в лучшем качестве
         </p>
+
+        {/* Leica branding */}
+        <motion.div
+          className="flex items-center gap-3 mt-2"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          {/* Leica red dot logo */}
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="13" fill="#E30613" stroke="white" strokeWidth="1"/>
+            <text x="14" y="18.5" textAnchor="middle" fill="white" fontSize="7.5" fontFamily="serif" fontWeight="bold" letterSpacing="0.5">LEICA</text>
+          </svg>
+          <span
+            className="text-foreground/80 mix-blend-difference"
+            style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)", fontWeight: 300, letterSpacing: "0.12em", fontStyle: "italic" }}
+          >
+            Michael by Leica
+          </span>
+        </motion.div>
       </motion.div>
 
       <motion.div
